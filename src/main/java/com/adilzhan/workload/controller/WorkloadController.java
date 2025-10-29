@@ -21,7 +21,6 @@ public class WorkloadController {
     @ResponseStatus(HttpStatus.OK)
     public void updateWorkload(@RequestBody WorkloadRequest req) {
         workloadService.updateWorkload(req);
-        System.out.println("Workload updated SUCCESSFULLY");
     }
 
     @GetMapping("/{username}/{year}/{month}")

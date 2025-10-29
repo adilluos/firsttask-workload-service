@@ -41,7 +41,7 @@ public class ServiceJwtAuthFilter extends OncePerRequestFilter {
     @Override
     protected boolean shouldNotFilter(HttpServletRequest request) {
         String path = request.getRequestURI();
-        return !path.startsWith("/api/v1/workload/");
+        return !path.startsWith("/api/v1/workload");
     }
 
     @Override
@@ -67,11 +67,9 @@ public class ServiceJwtAuthFilter extends OncePerRequestFilter {
                 return;
             }
 
-            // create a simple authenticated principal
             Authentication authentication = new ServiceAuthenticationToken(
                     claims.get("svc", String.class)
             );
-            // put into SecurityContext
             org.springframework.security.core.context.SecurityContextHolder.getContext()
                     .setAuthentication(authentication);
 
