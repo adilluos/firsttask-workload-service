@@ -1,0 +1,30 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: workload-service
+#  cloud:
+#    discovery:
+#      enabled: false
+#    netflix:
+#      eureka:
+#        client:
+#          register-with-eureka: false
+#          fetch-registry: false
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info, prometheus
+
+service-auth:
+  shared-secret: "change-this-to-a-strong-64+char-secret"
+  issuer: "firsttask"
+  audience: "workload-service"
