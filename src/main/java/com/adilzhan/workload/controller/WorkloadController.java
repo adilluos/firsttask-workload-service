@@ -23,15 +23,15 @@ public class WorkloadController {
         workloadService.updateWorkload(req);
     }
 
-    @GetMapping("/{username}/{year}/{month}")
-    public int getMonthlyWorkload(@PathVariable String username,
-                                  @PathVariable int year,
-                                  @PathVariable int month) {
-        return workloadService.getMonthlyWorkload(username, year, month);
-    }
-
-    @GetMapping
-    public Map<String, TrainerWorkload> getAllWorkloads() {
-        return workloadService.getAll();
-    }
+//    @GetMapping("/{username}/{year}/{month}")
+//    public int getMonthlyWorkload(@PathVariable String username,
+//                                  @PathVariable int year,
+//                                  @PathVariable int month) {
+//        return workloadService.getMonthlyWorkload(username, year, month);
+//    }
+//
+//    @GetMapping
+//    public Map<String, TrainerWorkload> getAllWorkloads() {
+//        return workloadService.getAll();
+//    }
 }
