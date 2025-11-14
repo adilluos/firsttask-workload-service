@@ -12,10 +12,6 @@ spring:
 #        client:
 #          register-with-eureka: false
 #          fetch-registry: false
-  data:
-    mongodb:
-      uri: mongodb://localhost:27017/workloaddb
-      database: workloaddb
 
 eureka:
   client:
