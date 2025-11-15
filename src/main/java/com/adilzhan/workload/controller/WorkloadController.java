@@ -1,11 +1,13 @@
 package com.adilzhan.workload.controller;
 
-import com.adilzhan.workload.model.TrainerWorkload;
-import com.adilzhan.workload.model.WorkloadRequest;
+import com.adilzhan.workload.dto.TrainerWorkload;
+import com.adilzhan.workload.dto.WorkloadRequest;
+import com.adilzhan.workload.model.TrainerSummary;
 import com.adilzhan.workload.service.WorkloadService;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Map;
 
 @RestController
@@ -31,7 +33,7 @@ public class WorkloadController {
     }
 
     @GetMapping
-    public Map<String, TrainerWorkload> getAllWorkloads() {
+    public Map<String, TrainerSummary> getAllWorkloads() {
         return workloadService.getAll();
     }
 }

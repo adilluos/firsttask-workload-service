@@ -1,7 +1,7 @@
 package com.adilzhan.workload.listener;
 
 import com.adilzhan.workload.config.ActiveMqConfig;
-import com.adilzhan.workload.model.WorkloadRequest;
+import com.adilzhan.workload.dto.WorkloadRequest;
 import com.adilzhan.workload.service.WorkloadService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;

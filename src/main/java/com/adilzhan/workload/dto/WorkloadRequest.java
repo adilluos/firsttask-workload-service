@@ -1,4 +1,4 @@
-package com.adilzhan.workload.model;
+package com.adilzhan.workload.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

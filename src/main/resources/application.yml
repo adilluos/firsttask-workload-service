@@ -4,6 +4,10 @@ server:
 spring:
   application:
     name: workload-service
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/workloaddb
+      database: workloaddb
 #  cloud:
 #    discovery:
 #      enabled: false
