@@ -32,3 +32,7 @@ service-auth:
   shared-secret: "T2V2V1d3ZHNzRjZHa2hsM3Q1Ym13SldoWVRnNGRtQWJUV1lXbG5uUnJzSjhRMzFhQzJkNHd5YUtsc1FqVFRoNlNyYw=="
   issuer: "firsttask"
   audience: "workload-service"
+
+app:
+  activemq:
+    broker-url: tcp://localhost:61616

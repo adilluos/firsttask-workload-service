@@ -1,0 +1,22 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb://mongo:27017/workloaddb
+      database: workloaddb
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://discovery-service:8761/eureka
+
+app:
+  activemq:
+    broker-url: tcp://activemq:61616
+
+service-auth:
+  shared-secret: "T2V2V1d3ZHNzRjZHa2hsM3Q1Ym13SldoWVRnNGRtQWJUV1lXbG5uUnJzSjhRMzFhQzJkNHd5YUtsc1FqVFRoNlNyYw=="
+  issuer: "firsttask"
+  audience: "workload-service"
+
+volumes:
+  - ~/.m2:/root/.m2
