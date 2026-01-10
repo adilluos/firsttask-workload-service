@@ -1,0 +1,25 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: workload-service
+
+eureka:
+  client:
+    enabled: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info, prometheus
+
+service-auth:
+  shared-secret: "T2V2V1d3ZHNzRjZHa2hsM3Q1Ym13SldoWVRnNGRtQWJUV1lXbG5uUnJzSjhRMzFhQzJkNHd5YUtsc1FqVFRoNlNyYw=="
+  issuer: "firsttask"
+  audience: "workload-service"
+
+app:
+  sqs:
+    queue-url: https://sqs.eu-central-1.amazonaws.com/656673948657/SimpleAdilzhan-Queue

@@ -3,7 +3,8 @@ package com.adilzhan.workload.controller;
 import com.adilzhan.workload.dto.TrainerWorkload;
 import com.adilzhan.workload.dto.WorkloadRequest;
 import com.adilzhan.workload.model.TrainerSummary;
-import com.adilzhan.workload.service.WorkloadService;
+import com.adilzhan.workload.service.WorkloadHashMapService;
+//import com.adilzhan.workload.service.WorkloadService;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,9 +14,12 @@ import java.util.Map;
 @RestController
 @RequestMapping("/api/v1/workload")
 public class WorkloadController {
-    private final WorkloadService workloadService;
+//    private final WorkloadService workloadService;
+    //Commented out above line and used the HashMap service implementation below for temp version of AWS-RDS
+    //(which is working without MongoDB for now)
+    private final WorkloadHashMapService workloadService;
 
-    public WorkloadController(WorkloadService workloadService) {
+    public WorkloadController(WorkloadHashMapService workloadService) {
         this.workloadService = workloadService;
     }
 
@@ -33,7 +37,8 @@ public class WorkloadController {
     }
 
     @GetMapping
-    public Map<String, TrainerSummary> getAllWorkloads() {
+//    public Map<String, TrainerSummary> getAllWorkloads() {
+    public Map<String, TrainerWorkload> getAllWorkloads() {
         return workloadService.getAll();
     }
 }
